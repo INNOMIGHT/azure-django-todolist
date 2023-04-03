@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-
+from django.core.management.commands.runserver import Command as runserver
+runserver.default_port = "8080"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -130,6 +131,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+ALLOWED_HOSTS = 'django-todo-azure.azurewebsites.net'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
