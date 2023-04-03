@@ -131,7 +131,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = 'django-todo-azure.azurewebsites.net'
+ALLOWED_HOSTS = [
+                'django-todo-azure.azurewebsites.net',
+                 '0.0.0.0'
+                 ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
